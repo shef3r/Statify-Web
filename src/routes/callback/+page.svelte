@@ -23,6 +23,7 @@
     console.log(response.access_token);
     localStorage.setItem("access_token", response.access_token);
     localStorage.setItem("refresh_token", response.refresh_token);
+    localStorage.setItem("justLoggedIn", "true");
   }
 
   onMount(async () => {
