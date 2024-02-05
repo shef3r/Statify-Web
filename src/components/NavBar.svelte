@@ -37,7 +37,7 @@
     <div class="navbar-center">
       <details class="dropdown dropdown-end">
         <summary class="m-1 btn">top tracks</summary>
-        <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+        <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52" data-sveltekit-reload>
           <li><a href="top?type=tracks&time=short" style="text-align: right;">4 weeks</a></li>
           <li><a href="top?type=tracks&time=medium">6 months</a></li>
           <li><a href="top?type=tracks&time=long">all time</a></li>
@@ -45,7 +45,7 @@
       </details>
       <details class="dropdown dropdown-start">
         <summary class="m-1 btn">top artists</summary>
-        <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+        <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52" data-sveltekit-reload>
           <li><a href="top?type=artists&time=short">4 weeks</a></li>
           <li><a href="top?type=artists&time=medium">6 months</a></li>
           <li><a href="top?type=artists&time=long">all time</a></li>
