@@ -15,7 +15,6 @@
         })
         .then(response => response.json())
         .then(data => {
-            // Parse the JSON response and get the image URL
             imageUrl = data.images && data.images.length > 0 ? data.images[0].url : null;
             if (!imageUrl) {
             console.log('No image available for the user.');
@@ -41,25 +40,6 @@
       startupRequests();
     });
 </script>
-  
-  <style>
-    #loginAlert {
-      opacity: 0;
-      max-width: 700px;
-      display: flex;
-      flex-direction: row;
-      justify-content:center;
-      align-items: center;
-      column-gap: 20px;
-      margin-top: 20px;
-      transition: opacity 1s ease-in-out;
-    }
-    #alertContainer {
-        position: absolute;
-        top: 20px;
-        width: 100%;
-    }
-  </style>
 
 <div class="grid grid-cols-1 justify-items-center" id="alertContainer">
 <div role="alert" class="alert alert-success" id="loginAlert" bind:this={loginAlert}>
@@ -68,18 +48,44 @@
 </div>
 </div>
 
-<div class="navbar bg-base-100">
-    <div class="flex-1">
-      <a class="btn bg-transparent border-0 text-xl normal-case">Statify</a>
+<div id="navbar" class="navbar bg-base-100">
+    <div id="navbartitle" class="navbar-start">
+      <p class="bg-transparent border-0 text-xl normal-case font-bold" style="margin-left: 30px;" id="glow">Statify</p>
     </div>
+    <div class="navbar-center">
+      <details class="dropdown dropdown-end">
+        <summary class="m-1 btn">top tracks</summary>
+        <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+          <li><a href="top?type=tracks&time=short" style="text-align: right;">4 weeks</a></li>
+          <li><a href="top?type=tracks&time=medium">6 months</a></li>
+          <li><a href="top?type=tracks&time=long">all time</a></li>
+        </ul>
+      </details>
+      <details class="dropdown dropdown-start">
+        <summary class="m-1 btn">top artists</summary>
+        <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+          <li><a href="top?type=artists&time=short">4 weeks</a></li>
+          <li><a href="top?type=artists&time=medium">6 months</a></li>
+          <li><a href="top?type=artists&time=long">all time</a></li>
+        </ul>
+      </details>
+    </div>
+    <div class="navbar-end">
       <div class="dropdown dropdown-end">
-        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle" id="pfp" style="margin-right:20px; scale:0.8; margin-top:5px;">
             <div class="indicator">
-              <img src="{imageUrl}" class="rounded-full">
+              <img src="{imageUrl}" class="rounded-full" alt="Spotify profile">
             </div>
           </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <ul class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
           <li><a class="text-error" href="/logout">Log out</a></li>
         </ul>
       </div>
+    </div>
+    </div>
+
+    <div class="container mx-auto mt-50" style="margin-top:100px;">
+      <header class="text-4xl font-semibold text-center">Welcome to <b id="glow">Statify!</b></header>
+      <br>
+      <p class="text-center">Choose a category and timeframe <br> in the top menu to view your stats.</p>
     </div>
