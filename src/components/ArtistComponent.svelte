@@ -38,7 +38,7 @@
   </style>
   
    <div id="cont">
-      <p id="position">#{position}</p>
+      <!-- <p id="position">#{position}</p> -->
       <img id="cover" src={image} alt="{title} artist cover" />
       <div id="textcont">
         <p id="title" class="text-base"><b>{title}</b></p>
