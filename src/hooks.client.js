@@ -32,7 +32,7 @@ else {
 const clientId = "b45797a8b3e4412ebdc7b6e22039d466";
 const hashed = await sha256(codeVerifier);
 const codeChallenge = base64encode(hashed);
-const redirectUri = "http://localhost:5173/callback";
+const redirectUri = "http://statify.shef3r.vercel.app/callback";
 const scope = 'user-top-read user-read-recently-played user-read-email user-read-private';
 const authUrl = new URL("https://accounts.spotify.com/authorize")
 
