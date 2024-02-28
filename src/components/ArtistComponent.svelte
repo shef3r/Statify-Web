@@ -19,7 +19,7 @@
       width: 65px;
       margin-top: 5px;
       margin-bottom: 5px;
-      margin-left: 10px;
+      margin-left: 5px;
     }
   
     #textcont {
