@@ -8,4 +8,7 @@ export default defineConfig({
       '@': '/src', // Assuming your source code is in the 'src' directory
     },
   },
+  build: {
+    target: 'esnext'
+  }
 });
