@@ -13,7 +13,7 @@
         client_id: "b45797a8b3e4412ebdc7b6e22039d466",
         grant_type: 'authorization_code',
         code,
-        redirect_uri: "http://localhost:5173/callback",
+        redirect_uri: "http://statify.shef3r.vercel.app/callback",
         code_verifier: localStorage.getItem("code_verifier"),
       }),
     };
