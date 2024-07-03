@@ -5,3 +5,5 @@ This app is a hobby project, so it can't the accepted by Spotify. To use the sit
 
 Spotify stats viewer made with love, Svelte and DaisyUI.
 Very simple, practical project. All data is stored on-device.
+
+// rebrand soon
